@@ -1,0 +1,1181 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.header_img{
+    display: flex;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.404) 0%, rgba(0, 0, 0, 0.39) 100%), url(../img/laptop-g55e3235a2_1920.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    flex-direction: column;
+}
+.nav{
+    flex: 1 1 auto;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;  
+}
+.logo{
+    flex: 1 1 50%;
+    padding-left: 20px;
+    height: 30px;
+    margin-left: 80px;
+}
+.logo img{
+    object-fit: cover;
+    height: inherit;
+
+}
+.icono{
+    display: none;
+}
+.links{
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: space-around;
+    animation-duration: 5s;
+    animation-name: slidein1;
+}
+.links a{
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    display: block;
+    padding: 5px;
+    font-size: .9rem;
+}
+.links a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #FFD523, #FFD523, #ffe261);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+  .links a:hover::before {
+    transform: scaleX(1);
+  }  
+  .personal_information{
+      flex: 1 1 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff; 
+      animation-duration: 3s;
+      animation-name: slidein2;
+  }
+  .welcome{
+      font-size: 2.1rem;
+      color: #F9CA26;
+      letter-spacing: 2px;
+      font-weight: 400;  
+      padding-bottom: 50px;
+  }
+  .name{
+      font-size: 2.6rem;
+      letter-spacing: 4px;
+      color: #ffffff;
+      padding-bottom: 50px;
+      font-weight: 500;
+  }
+  .career{
+    font-size: 1.3rem;
+    color: #ffffff;
+    font-weight: 400;  
+    padding-bottom: 20px;
+  }
+  @keyframes slidein1 {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  @keyframes slidein2 {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+    to {
+      margin-left: 0%;
+      width: 100%; 
+    }
+  }
+/*HEADER ACERCA DE MI*/
+
+.box_about{
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  padding-bottom: 80px;
+  background-color: #222222;
+
+}
+.initial_title{
+  width: 100%;
+  height: auto;
+  background-color: #222222;
+  color: #ffe261;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  
+}
+.initial_title h2{
+  font-size: 2.125rem;
+  font-weight: 300;
+  text-align: center; 
+}
+.photo_about{
+  flex: 1 1 40%;
+  display: flex;
+  background-color: #222222;
+  justify-content: center;
+}
+.photo_about img{
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+}
+.social_networks{
+  flex: 1 1 10%;
+  display: flex;
+  background-color: #222222;
+  height: auto;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+.social_networks span{
+  font-size: 1.75rem;
+  padding-bottom: 20px;
+}
+.fa-whatsapp{
+  color: #939393;
+
+}
+.fa-whatsapp:hover{
+  color: #00bb2d;
+}
+.fa-envelope{
+  color: #939393;
+}
+
+.information_about{
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #222222;
+  height: 400px;
+}
+.name_about1{
+  color:#F9CA26;
+  font-weight: 300;
+}
+.name_about{
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 1.438rem;
+  letter-spacing: 0px;
+  padding: 0px;
+}
+.charge{
+  padding-top: 5px;
+  font-size: 1.188rem;
+  color:#F9CA26;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+.p_about{
+  color: #939393;
+  font-size: 1rem;
+  padding-right: 200px;
+}
+.download_cv{
+  margin-top: 20px;
+  width: 160px;
+  height: 35px;
+  border-radius: 10px;
+  color: #ffffff;
+  border: #F9CA26 1.5px solid;
+  background-color: #222222;
+  background-image: -webkit-linear-gradient(45deg, #F9CA26 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #F9CA26 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background .5s ease-in-out;
+  transition: background .5s ease-in-out;
+  cursor: pointer;
+}
+.download_cv:hover {
+  background-position: 0;
+  color: #000000;
+}
+.title_button{
+  font-size: 1rem;
+  letter-spacing: .5px;
+}
+/*CAJA DE EXPERIENCIA*/
+
+.box_experience{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-bottom: 120px;
+  background-color: #161616;
+}
+.title_experience{
+  width: 100%;
+  height: auto;
+  background-color: #161616;
+  color: #ffe261;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+.title_experience h2{
+  font-size: 2.125rem;
+  font-weight: 300;
+  text-align: center;
+}
+.information_experience{
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #161616;
+  padding-right: 250px;
+}
+.photo_experience{
+  flex: 1 1 50%;
+  display: flex;
+  background-color: #161616;
+  justify-content: center;
+}
+.photo_experience img{
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: #000000 20px 17px;
+  border-radius: 10px;
+}
+.title_company{
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.25rem;
+  padding-bottom: 5px;
+}
+.name_company{
+  color: #F9CA26;
+}
+.date_company{
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 0.938rem;
+  padding-bottom: 5px;
+}
+.charge-company{
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.063rem;
+  padding-bottom: 10px;
+}
+.charge-company2{
+  color: #F9CA26;
+}
+.p_company{
+  color: #939393;
+  font-size: 1rem;;
+}
+
+/*EDUCACION*/
+.box_education{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-bottom: 80px;
+  background-color: #222222;
+}
+.title_education{
+  width: 100%;
+  height: auto;
+  background-color: #222222;
+  color: #ffe261;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+.title_education h2{
+  font-size: 2.125rem;
+  font-weight: 300;
+  text-align: center;
+}
+.sub_box_education{
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  background-color: #222222;
+}
+.main_box{
+  display: flex;
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  flex-direction: column;
+  background-color: #2B2B2B;
+}
+.photo_education{
+  flex: 1 1 60%;
+  height: 285px;
+  background-color: #2B2B2B;
+}
+.photo_education img{
+  width: 400px;
+  height: 285px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.info_education{
+  flex: 1 1 40%;
+  background-color: #2B2726;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+}
+.title_university{
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1rem;
+  padding-bottom: 3px;
+}
+.subtitle_university{
+  color: #F9CA26;
+  font-weight: 300;
+  font-size: 1.063rem;
+  padding-bottom: 1.5px;
+}
+.p_university{
+  color: #939393;
+}
+
+/*APTITUDES*/
+.box_skills{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-bottom: 120px;
+  background-color: #161616;
+}
+.title_skills{
+  width: 100%;
+  height: auto;
+  background-color: #161616;
+  color: #ffe261;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+.title_skills h2{
+  font-size: 2.125rem;
+  font-weight: 300;
+  text-align: center;
+}
+.photo_skills{
+  flex: 1 1 50%;
+  display: flex;
+  background-color: #161616;
+  justify-content: center;
+}
+.photo_skills img{
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: #0000005e 10px 8px;
+  border-radius: 10px;
+}
+.info_skills{
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #161616;
+  justify-content: center;
+  padding-right: 250px;
+  }
+
+.info_skills h4{
+  color: #939393;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.fa-check{
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+/*CONTACTO*/
+.box_contact{
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #222222;
+}
+.title_contact{
+  width: 100%;
+  height: auto;
+  background-color: #222222;
+  color: #ffe261;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+.title_contact h2{
+  font-size: 2.125rem;
+  font-weight: 300;
+  text-align: center;
+}
+.box_contact_form{
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 40px;
+}
+.contact_name{
+  flex: 50%;
+}
+.contact_name input{
+  width: 90%;
+  height: 30px;
+  margin-bottom: 25px;
+  background-color: #4B4B4B;
+  border: 0px;
+  color: #fff;
+  font-size: 1rem;
+  padding-left: 5px;
+}
+.contact_lastname{
+  flex: 50%;
+}
+.contact_lastname input{
+  width: 90%;
+  height: 30px;
+  margin-bottom: 25px;
+  background-color: #4B4B4B;
+  border: 0px;
+  font-size: 1rem;
+  padding-left: 5px;
+  color: #fff;
+}
+.contact_email{
+  flex: 100%;
+}
+.contact_email input{
+  width: 95%;
+  height: 30px;
+  margin-bottom: 25px;
+  background-color: #4B4B4B;
+  border: 0px;
+  font-size: 1rem;
+  padding-left: 5px;
+  color: #fff;
+}
+.contact_text{
+  flex: 100%;
+}
+.contact_text textarea{
+  width: 95%;
+  height: 150px;
+  margin-bottom: 25px;
+  background-color: #4B4B4B;
+  border: 0px;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 5px;
+  color: #fff;
+}
+.contact_button{
+  flex: 100%;
+  text-align: end;
+  margin-right: 5%;
+}
+.contact_button button{
+  width: 90px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 0px;
+  border-radius: 10px;
+  background-color: #F9CA26;
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 45px;
+}
+.box_contact_img{
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;  
+}
+.box_contact_img img{
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+}
+/*FOOTER*/
+.footer{
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: #222222;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: .5px solid #4b4848;
+}
+.title_footer{
+ flex: 1 1 50%;
+ text-align: center;
+}
+.p_footer{
+  color: #ffffff;
+  font-weight: 300;
+  padding-bottom: 10px;
+  font-size: 0.875rem;
+}
+.title_footer img{
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+}
+.social_networks_footer{
+  flex: 1 1 50%;
+  text-align: center;
+  color: #F9CA26;
+}
+.social_networks_footer a{
+  font-size: 1.375rem;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.logo_inst{
+  color: #939393;
+}
+.logo_gmail{
+  color: #939393;
+}
+
+/*COLOR SCROLL NAV*/
+.nav_scroll{
+  background-color: #000000;
+}
+
+/*RESPONSIVE @media (max-width: 991.98px) { ... }*/
+@media (max-width: 991.98px) {
+  .icono{
+    display: block;
+    color: #ffffff;
+    padding-right: 50px;
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .links{
+    position: fixed;
+    left: 100%;
+    width: 100%;
+    top: 60px;
+    background-color: #222222;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+  }
+  .links_toggle{
+    left: 0px;
+  }
+  .links a{
+    font-size: 1.5rem;
+    padding-bottom: 90px;
+  }
+  .welcome{
+    font-size: 2.8rem;
+  }
+  .name{
+    font-size: 2.8rem;
+  }
+  .career{
+    font-size: 2.1rem;
+  }
+  .box_about{
+    flex-direction: row;
+    padding-bottom: 40px;
+  }
+  .photo_about{
+    flex: 1 1 80%;
+    display: flex;
+    background-color: #222222;
+    justify-content: center;
+  }
+  .photo_about img{
+    width: 380px;
+    height: auto;
+    object-fit: cover;
+  }
+  .social_networks{
+    flex: 1 1 20%;
+    display: flex;
+    background-color:#222222;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .social_networks span{
+    font-size: 33px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .fa-whatsapp{
+    color: #00bb2d;
+  }
+  .fa-envelope{
+    color: #db4a39;
+  }
+  .information_about{
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+    height: 400px;
+  }
+  .name_about{
+    font-size: 1.8rem;
+  }
+  .charge{
+    padding-top: 10px;
+    font-size: 1.4rem;
+    color:#F9CA26;
+    font-weight: 500;
+    padding-bottom: 20px;
+  }
+  .p_about{
+    padding-right: 100px;
+    padding-left: 100px;
+    font-size: 1.4rem;
+  }
+  .download_cv{
+    margin-top: 40px;
+    width: 200px;
+    height: 55px;
+  }
+  .title_button{
+    font-size: 1.2rem;
+    letter-spacing: .5px;
+  }
+  /*CAJA DE EXPERIENCIA*/
+  .box_experience{
+    
+  }
+  .information_experience{
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-right: 90px;
+    padding-left: 90px;
+  }
+  .photo_experience{
+    flex: 1 1 100%;
+    display: flex;
+    background-color: #161616;
+    justify-content: center;
+  }
+  .photo_experience img{
+    width: 500px;
+    box-shadow: #000000 10px 7px;
+  }
+  .title_company{
+    font-size: 1.6rem;
+    padding-bottom: 10px;
+  }
+  .date_company{
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+  }
+  .charge-company{
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+  }
+  .p_company{
+    font-size: 1.4rem;;
+  }
+  /*EDUCACION*/
+  .box_education{
+    padding-bottom: 50px;
+  }
+  .main_box{
+    width: 500px;
+    margin-bottom: 50px;
+  }
+  .photo_education{
+    flex: 1 1 60%;
+    height: 200px;
+    background-color: #2B2B2B;
+  }
+  .photo_education img{
+    width: 500px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .info_education{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+  }
+  .title_university{
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.4rem;
+    padding-bottom: 3px;
+  }
+  .subtitle_university{
+    color: #F9CA26;
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding-bottom: 1.5px;
+  }
+  .p_university{
+    color: #939393;
+    font-size: 1.25rem;
+  }
+  /*APTITUDES*/
+  .photo_skills{
+    flex: 1 1 50%;
+  }
+  .photo_skills img{
+    width: 500px;
+    height: 250px;
+
+  }
+  .info_skills{
+    flex: 1 1 100%;
+    align-items: flex-start;
+    background-color: #161616;
+    justify-content: center;
+    margin-top: 40px;
+    padding-left: 20%;
+    padding-right: 0px;
+    }
+    .info_skills h4{
+      color: #939393;
+      font-weight: 500;
+      font-size: 1.45rem;
+    }
+    .fa-check{
+      color: #ffffff;
+      font-size: 0.8rem;
+    }
+    /*FOOTER*/
+    .p_footer{
+      font-size: 0.8rem;
+    }
+    .logo_gmail{
+      color: #939393;
+    }
+}
+
+@media (max-width: 767.98px) {
+  .logo{   
+    padding-left: 20px;
+    margin-left: 30px;
+  }
+  .header_img{
+    width: 100%;
+    height: 100vh;
+    flex-direction: row;
+  }
+  .welcome{
+    font-size: 3.2rem;
+  }
+  .name{
+    font-size: 3.2rem;
+  }
+  .career{
+    font-size: 2.3rem;
+  }
+
+  .box_about{
+    padding-bottom: 60px;
+  }
+  .initial_title{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .initial_title h2{
+    font-size: 2.5rem;
+  }
+  .photo_about{
+    flex: 1 1 100%;
+  }
+  .photo_about img{
+    width: 360px;
+  }
+  .social_networks{
+    flex: 1 1 100%;
+    flex-direction: row;
+  }
+  .social_networks span{
+    font-size: 36px;
+  }
+  .name_about{
+    font-size: 2rem;
+  }
+  .charge{
+    font-size: 1.6rem;
+  }
+  .p_about{
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: 1.6rem;
+  }
+  .title_experience h2{
+    font-size: 2.5rem;
+  }
+  .information_experience{
+    flex: 1 1 100%;
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  .photo_experience{
+    flex: 1 1 100%;
+  }
+  .photo_experience img{
+    width: 400px;
+}
+.title_company{
+  font-size: 1.8rem;
+}
+.date_company{
+  font-size: 1.35rem;
+}
+.charge-company{
+  font-size: 1.7rem;
+  padding-bottom: 20px;
+}
+.p_company{
+  font-size: 1.6rem;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+/*EDUCACION*/
+.title_education h2{
+  font-size: 2.5rem;
+}
+.sub_box_education{
+  flex: 1 1 100%;
+}
+.main_box{
+  width: 500px;
+}
+.photo_education img{
+  width: 500px;
+}
+.title_university{
+  font-size: 1.6rem;
+  padding-bottom: 5px;
+}
+.subtitle_university{
+  font-size: 1.7rem;
+  padding-bottom: 1.7px;
+}
+.p_university{
+  font-size: 1.45rem;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+/*APTITUDES*/
+.photo_skills img{
+  width: 400px;
+}
+/*Contacto*/
+.box_contact{
+  flex-direction: column;
+}
+.title_contact h2{
+  font-size: 2rem;
+}
+.box_contact_form{
+  flex: 1 1 100%;
+  padding-left: auto;
+  padding-right: auto;
+}
+.contact_name{
+  flex: 100%;
+}
+.contact_name input{
+  width: 90%;
+}
+.contact_lastname{
+  flex: 100%;
+}
+.contact_lastname input{
+  width: 90%;
+}
+.contact_email input{
+  width: 90%;
+}
+.contact_text textarea{
+  width: 90%;
+}
+.contact_button{
+  margin-right: 10%;
+}
+.box_contact_img img{
+  width: 200px;
+}
+}
+@media (max-width: 575.98px) {
+  .nav{
+    height: 60px;
+  }
+  .fa-bars{
+    font-size: 24px;
+  }
+  .links a{
+    font-size: 1.2rem;
+    padding-bottom: 60px;
+  }
+  .header_img{
+
+  }
+  .personal_information{
+    justify-content: center;
+    align-items: center;
+  }
+  .icono{
+    padding-right: 20px;
+    font-size: 32px;
+  }
+  .logo{   
+    padding-left: 10px;
+    margin-left: 10px;
+    height: 25px
+  }
+  .links a{
+    font-size: 1rem;
+    padding-bottom: 90px;
+  }
+  .welcome{
+    text-align: center;
+    font-size: 2.1rem;
+    padding-right:20px;
+    padding-left: 20px;
+  }
+  .name{
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    padding-right:20px;
+    padding-left: 20px;
+  }
+  .career{
+    text-align: center;
+    font-size: 1.4rem;
+    padding-right:20px;
+    padding-left: 20px;
+  }
+  .box_about{
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .initial_title{
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .initial_title h2{
+    font-size: 2rem;
+  }
+  .photo_about img{
+    width: 220px;
+  }
+  .social_networks span{
+    font-size: 26px;
+  }
+  .information_about{
+    height: auto;
+  }
+  .name_about{
+    padding-top: 10px;
+    font-size: 1.2rem;
+  }
+  .charge{
+    font-size: 1.1rem;
+  }
+  .p_about{
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 1rem;
+  }
+  .download_cv{
+    margin-top: 40px;
+    width:160px;
+    height: 35px;
+  }
+  .title_button{
+    font-size: 1rem;
+    letter-spacing: .2px;
+  }
+  /*CAJA DE EXPERIENCIA*/
+  .box_experience{
+    padding-top: 20px;
+    padding-bottom: 60px;
+
+  }
+  .title_experience{
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .title_experience h2{
+    font-size: 2rem;
+  }
+  .information_experience{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .photo_experience img{
+    width: 220px;
+  }
+
+  .title_company{
+    font-size: 1.2rem;
+  }
+  .date_company{
+    font-size: 0.9rem;
+  }
+  .charge-company{
+    font-size: 1rem;
+    padding-bottom: 20px;
+  }
+  .p_company{
+    font-size: 1rem;  
+  }
+  /*EDUCACION*/
+  .box_education{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .title_education{
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+.title_education h2{
+  font-size: 2rem;
+}
+  .main_box{
+    width: 280px;
+  }
+  .photo_education{
+    height: auto;
+  }
+  .photo_education img{
+    width: 280px;
+    height: 150px;
+  }
+  .title_university{
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding-bottom: 3px;
+  }
+  .subtitle_university{
+    color: #F9CA26;
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding-bottom: 1.5px;
+  }
+  .p_university{
+    font-size: 1rem;
+    color: #939393;
+  }
+  /*APTITUDES*/
+  .box_skills{
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+  .title_skills{
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .title_skills h2{
+    font-size: 2rem;
+  }
+  .photo_skills img{
+    width: 220px;
+    height: 120px;
+  }
+  .info_skills h4{
+    color: #939393;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .fa-check{
+    color: #ffffff;
+    font-size: 0.5rem;
+  }
+
+  .p_footer{
+    color: #ffffff;
+    font-weight: 300;
+    padding-bottom: 10px;
+    font-size: 1rem;
+  }
+  .title_footer img{
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .p_footer{
+  font-size: .8rem;
+  }
+  .title_footer img{
+    width: 40px;
+  }
+  .social_networks_footer span{
+    font-size: .8rem;
+  }
+}
